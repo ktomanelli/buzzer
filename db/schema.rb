@@ -10,11 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_10_191300) do
+ActiveRecord::Schema.define(version: 2020_09_11_021528) do
 
   create_table "contestants", force: :cascade do |t|
     t.integer "game_id"
     t.string "name"
+    t.boolean "buzzed", default: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "games", force: :cascade do |t|
